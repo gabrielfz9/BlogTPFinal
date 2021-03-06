@@ -8,7 +8,7 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
-        'NAME':'BLOG',
+        'NAME':'BLOG1',
         'Trusted_Connection':'yes',
         'HOST': 'localhost\SQLEXPRESS',
         'OPTIONS':{

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">	
+		{% for object in object_list %}
+			<div class="col-4">
+				
+				<div class="card" style="width: 18rem;">
+					<img src="media_root/{{ object.miniatura }}" class="card-img-top" alt="...">
+
+					<div class="card-body">
+						<a href="{{ object.get_absolute_url }}">
+							<h5 class="card-title">{{ object.titulo }}</h5>
+						</a>
+						<p class="card-text">{{ object.contenido|truncatechars:50 }}</p>
+						<hr/>
+
+						<p class="card-text">
+							Posted {{ object.fecha_publicacion}}
+						</p>
+					</div>
+				</div>
+			</div> 
+		{% endfor %}
+		</div>	
+	</div>
+{% endblock content %}
