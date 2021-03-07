@@ -23,6 +23,8 @@ class Post(models.Model):
 	slug = models.CharField('Slug', max_length = 100, blank = False, null = False)
 	fecha_publicacion = models.DateTimeField('Fecha de publicación', auto_now_add = True) 
 	ultima_actualizacion = models.DateTimeField('Última actualización', auto_now = True)
+	#post_autor = models.ForeignKey(User, on_delete = models.CASCADE)
+	#post_categoria = models.ForeignKey(User, on_delete = models.CASCADE)
 
 	class Meta:
 		verbose_name = 'Post'

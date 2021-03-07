@@ -17,7 +17,7 @@ class PostCreateView(LoginRequiredMixin, CreateView): #entra heredando el create
 ############################LISTAR POSTS##################################
 
 class PostListView(ListView):
-	queryset = Post.objects.all().order_by('fecha_creacion')
+	queryset = Post.objects.all().order_by('-fecha_publicacion')
 	model = Post # Modelo creado en models.py el cual se creo con los campos a usar en la creacion del post
 	template_name = 'posts/post_list'
 
